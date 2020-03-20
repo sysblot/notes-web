@@ -13,7 +13,7 @@ This is the UI repo for notes-web
 * node
 ---
 ## Installation
-* clone the [repo](https://github.com/sysblot/notes-web.git)
+* clone <strong>https://github.com/sysblot/notes-web.git </strong>
 * cd notes-web
 * make all
 ---
