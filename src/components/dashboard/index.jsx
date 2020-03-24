@@ -1,10 +1,11 @@
 import React from 'react';
-import Header from './Header'
-import SidePanel from './SidePanel';
-import Pad from './Pad';
+import Header from '../header'
+import SidePanel from '../sidePanel';
+import Pad from '../pad';
+import './style.css'
 
 const Dashboard = function () {
-    return <div> 
+    return <div className="dashboard"> 
         <Header />
         <SidePanel />
         <Pad />
