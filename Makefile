@@ -11,3 +11,6 @@ test:
 
 all:
 	make install
+
+build:
+	npm run build
