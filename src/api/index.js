@@ -3,3 +3,7 @@ const baseURL = process.env.NODE_ENV === "development" ?process.env.REACT_APP_DE
 exports.getNotes = function () {
    return fetch(`${baseURL}/notes`);
 }
+
+exports.createNote = function (data) {
+   return fetch(`${baseURL}/notes`,{method:"POST",headers:{"Content-Type":'application/json'},body:JSON.stringify(data)});
+}
