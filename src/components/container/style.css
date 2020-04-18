@@ -1,25 +1,27 @@
-.container-icon{
-    padding:1vw;
-    cursor: pointer;
+.container-icon {
+  padding: 1vw;
+  cursor: pointer;
 }
 
-.icon-wrapper{
-    width: 6vw;
-    height: 6vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.icon-wrapper {
+  width: 6vw;
+  height: 6vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-    grid-gap: 30px;
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 30px;
+
+  height: 90%;
 }
 
 .add-icon {
-    color: white;
-    font-size: 30px;
-    margin-top: -57px;
-    cursor: pointer;
+  color: white;
+  font-size: 30px;
+  margin-top: -57px;
+  cursor: pointer;
 }
