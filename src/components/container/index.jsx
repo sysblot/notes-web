@@ -21,7 +21,7 @@ class Container extends React.Component {
       <div className="container">
         <Router>
           <Switch>
-            <Route path="/notes/:note_id" component={Editor} />
+            <Route path="/notes/:note_id" component={(props) => <Editor props={{ ...props, new: false }} />} />
             <Route
               path="/create"
               component={(props) => <Editor props={{ ...props, new: true }} />}
