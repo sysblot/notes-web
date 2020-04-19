@@ -6,7 +6,6 @@ const Auth = function () {
 
     const onSignIn = function (googleUser){
         console.log(googleUser,'.....................................................');
-        
     }
   return (
     <div >
