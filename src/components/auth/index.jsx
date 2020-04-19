@@ -1,17 +1,26 @@
 import React from 'react';
-
 import './style.css';
 
-const Auth = function () {
+const GOOGLE_BUTTON_ID = "google-sign-in-button";
 
-    const onSignIn = function (googleUser){
-        console.log(googleUser,'.....................................................');
-    }
-  return (
-    <div >
-        <div className="g-signin2" data-onsuccess={onSignIn}></div>
-    </div>
-  );
+
+class Auth extends React.Component {
+
+  componentDidMount() {
+    window.gapi.signin2.render(GOOGLE_BUTTON_ID, {
+      width: 200,
+      height: 50,
+      onsuccess: this.onSuccess
+    });
+  }
+
+  onSuccess(googleUser) {
+    console.log(googleUser);
+  }
+
+  render(){
+    return <div id={GOOGLE_BUTTON_ID} />;
+  }
 };
 
 export default Auth;
