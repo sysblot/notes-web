@@ -26,7 +26,7 @@ class Container extends React.Component {
               path="/create"
               component={(props) => <Editor props={{ ...props, new: true }} />}
             ></Route>
-            <Route path="/">
+            <Route path="/notes">
               <Link to="/create">
                 <AddFile />
               </Link>

@@ -1,7 +1,4 @@
-const baseURL =
-  process.env.NODE_ENV === 'development'
-    ? process.env.REACT_APP_DEV_BASE_URL
-    : process.env.REACT_APP_PROD_BASE_URL;
+const baseURL ="https://blotnotes-api-staging.herokuapp.com";
 
 const doAPIFetch = function (path, method, paylod) {
   const URL = baseURL + path;
