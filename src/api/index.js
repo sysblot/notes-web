@@ -1,4 +1,4 @@
-const baseURL ="https://blotnotes-api-staging.herokuapp.com";
+const baseURL = 'https://blotnotes-api-staging.herokuapp.com';
 
 const doAPIFetch = function (path, method, paylod) {
   const URL = baseURL + path;
@@ -7,6 +7,14 @@ const doAPIFetch = function (path, method, paylod) {
     case 'POST':
       promise = fetch(URL, {
         method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(paylod),
+      });
+      break;
+
+    case 'PATCH':
+      promise = fetch(URL, {
+        method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(paylod),
       });
@@ -24,9 +32,13 @@ exports.getNotes = function () {
 };
 
 exports.createNote = function (data) {
-  return doAPIFetch(`${baseURL}/notes`, 'POST', data);
+  return doAPIFetch('/notes', 'POST', data);
 };
 
 exports.getNote = function (path) {
   return doAPIFetch(path);
+};
+
+exports.saveNote = function (id, payload) {
+  return doAPIFetch(`/notes/${id}`, 'PATCH', payload);
 };

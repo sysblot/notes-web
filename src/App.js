@@ -1,17 +1,18 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
-import Dashboard from './components/dashboard/index.jsx';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
 import Auth from './components/auth/index.jsx';
+import Dashboard from './components/dashboard/index.jsx';
 
 function App() {
   return (
     <Router>
       <Switch>
-      <Route path="/notes" component={Dashboard} />
-      <Route path="/" component={Auth} />
+        <Route exact path="/" component={Auth} />
+        <Route path="/notes" component={Dashboard} />
       </Switch>
-   </Router>
+    </Router>
   );
 }
 

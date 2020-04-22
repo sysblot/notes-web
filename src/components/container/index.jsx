@@ -21,11 +21,14 @@ class Container extends React.Component {
       <div className="container">
         <Router>
           <Switch>
-            <Route path="/notes/:note_id" component={(props) => <Editor props={{ ...props, new: false }} />} />
+            <Route
+              path="/notes/:note_id"
+              component={(props) => <Editor props={{ ...props, new: false }} />}
+            />
             <Route
               path="/create"
               component={(props) => <Editor props={{ ...props, new: true }} />}
-            ></Route>
+            />
             <Route path="/notes">
               <Link to="/create">
                 <AddFile />
